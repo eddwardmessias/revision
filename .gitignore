@@ -1,0 +1,24 @@
+# Dependências
+node_modules/
+
+# Arquivos de compilação
+dist/
+
+# Arquivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos de build do TypeScript
+*.map
+
+z-*.md
