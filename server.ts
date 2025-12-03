@@ -55,25 +55,27 @@ server.get('/courses/:id', async (request, reply) => {
   return reply.status(404).send({ error: 'Course not found' })
 })
 
-// server.post('/courses', (request, reply) => {
+server.post('/courses', async (request, reply) => {
 
-//   type Body = {
-//     title: string
-//   }
+  type Body = {
+    title: string
+  }
 
-//   const body = request.body as Body
+  const body = request.body as Body
 
-//   const coursesId = crypto.randomUUID()
+  const courseTitle = body.title
 
-//   const courseTitle = body.title
+  if (!courseTitle) {
+    return reply.status(400).send({ error: 'Title is required' })
+  }
 
-//   if (!courseTitle) {
-//     return reply.status(400).send({ error: 'Title is required' })
-//   }
-
-//   courses.push({ id: coursesId, title: courseTitle })
-//   return reply.status(201).send({ coursesId })
-// })
+  const result = await db
+    .insert(courses)
+    .values({title: courseTitle})
+    .returning()
+    
+  return reply.status(201).send({ courseId: result[0].id })
+})
 
 server.listen({ port: 3333 }).then(() => {
   console.log('HTTP Server running on http://localhost:3333')
