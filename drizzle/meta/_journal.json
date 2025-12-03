@@ -8,6 +8,13 @@
       "when": 1764699415700,
       "tag": "0000_blushing_longshot",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1764726661137,
+      "tag": "0001_petite_starfox",
+      "breakpoints": true
     }
   ]
 }

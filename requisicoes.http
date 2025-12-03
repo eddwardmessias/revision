@@ -9,4 +9,4 @@ Content-Type: application/json
 GET http://localhost:3333/courses
 
 ###
-GET http://localhost:3333/courses/73cb9e04-f747-42ed-b876-94c61e293160
+GET http://localhost:3333/courses/b020573c-611e-4820-89b1-9abac3e054d1
