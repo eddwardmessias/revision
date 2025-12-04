@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --env-file .env --watch server.ts",
+    "db:seed": "node --env-file .env src/database/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"
@@ -15,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "@fastify/swagger": "^9.6.1",
     "@fastify/swagger-ui": "^5.2.3",
     "@scalar/fastify-api-reference": "^1.40.0",
