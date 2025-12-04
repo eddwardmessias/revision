@@ -6,7 +6,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3333/courses?orderBy=title&page=2
+GET http://localhost:3333/courses?orderBy=title
 
 ###
 GET http://localhost:3333/courses/b020573c-611e-4820-89b1-9abac3e054d1
