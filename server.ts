@@ -5,6 +5,7 @@ import { validatorCompiler, serializerCompiler, type ZodTypeProvider, jsonSchema
 import { getCoursesRoute } from './src/routes/get-courses.ts'
 import { getCourseByIdRoute } from './src/routes/get-courses-by-id.ts'
 import { createCourseRoute } from './src/routes/create-courses.ts'
+import scalarAPIReference from '@scalar/fastify-api-reference'
 
 
 const server = fastify({
@@ -29,7 +30,7 @@ server.register(fastifySwagger, {
   transform: jsonSchemaTransform,
 })
 
-server.register(fastifySwaggerUi, {
+server.register(scalarAPIReference, {
   routePrefix: '/docs',
 })
 
